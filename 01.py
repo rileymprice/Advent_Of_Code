@@ -1,5 +1,5 @@
 from collections import deque
-input_file = f'input/1.txt'
+input_file = f'input/01.txt'
 
 def part_one():
     last_input = -1
