@@ -51,7 +51,6 @@ def calculate_remainder(board):
 
 
 def part_one(bingo_numbers, bingo_card_list):
-    tries = 0
     for number in bingo_numbers:
         #print(number)
         for index,board in enumerate(bingo_card_list):
@@ -60,4 +59,23 @@ def part_one(bingo_numbers, bingo_card_list):
                 #print(board, index)
                 return calculate_remainder(board) * number
         #print(bingo_card_list[0])
-print(part_one(bingo_numbers,bingo_card_list))
+print(f'Part One: {part_one(bingo_numbers,bingo_card_list)}')
+
+
+def part_two(bingo_numbers, bingo_card_list):
+    final_number = 0
+    
+    for number in bingo_numbers:
+        winners = []
+        #print(number)
+        for index,board in enumerate(bingo_card_list):
+            mark_a_number(board,number)
+            if is_a_winner(board):
+                #print(board, index)
+                final_number = calculate_remainder(board) * number
+                winners.append(board)
+        for winner in winners:
+            bingo_card_list.remove(winner)
+    return final_number
+
+print(f'Part Two: {part_two(bingo_numbers, bingo_card_list)}')
