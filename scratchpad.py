@@ -1,12 +1,2 @@
-from collections import deque
-stack = deque()
-stack.append(1)
-stack.append(2)
-stack.append(3)
-print(stack)
-stack.pop()
-stack.appendleft(4)
-print(stack)
-stack.pop()
-stack.appendleft(5)
-print(sum(stack))
+given = ['a','b','c']
+print(''.join(given))
