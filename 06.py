@@ -29,5 +29,5 @@ def part_one(days, fish_list):
     return sum(fish_list)
 
 
-print(f"Part One: {part_one(DAYS_TO_SIMULATE, fish_ages)}")
-print(f"Part Two: {part_one(DAYS_TO_SIMULATE_PART_TWO, fish_ages)}")
+print(f"Part One: {part_one(80, fish_ages)}")
+print(f"Part Two: {part_one(256, fish_ages)}")
