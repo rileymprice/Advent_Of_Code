@@ -10,6 +10,10 @@ os.chdir(day_number)
 with open("input.txt", "w") as input_file:
     pass
 
+# Create scratchpad file
+with open("scratchpad.py", "w") as scratchpad_file:
+    pass
+
 # Create solution file
 with open("solution.py", "w") as solution_file:
     solution_mock = """import os
